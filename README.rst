@@ -1,3 +1,14 @@
+.. image:: https://travis-ci.org/fabiommendes/jarbas-tasks.svg?branch=master
+   :target: https://travis-ci.org/fabiommendes/jarbas-tasks
+
+.. image:: https://coveralls.io/repos/github/fabiommendes/jarbas-tasks/badge.svg?branch=master
+   :target: https://coveralls.io/github/fabiommendes/jarbas-tasks?branch=master
+
+.. image:: https://api.codeclimate.com/v1/badges/bc4f2a1234462c9de61f/maintainability
+   :target: https://codeclimate.com/github/fabiommendes/jarbas-tasks/maintainability
+   :alt: Maintainability
+
+
 ============
 Jarbas tasks
 ============
