@@ -46,15 +46,18 @@ default tasks to the jarbas-tasks command.
 In order to do so, create a Python package that expose the following entry
 points:
 
-    setup(
-        ...,
-        entry_points={
-            'jarbas-tasks': [
-                'mytask1 = mytask:task1',  # Maps command name to task object
-                'mytask2 = mytask:task2',
-            ]
-        },
-    }
+.. code-block:: python
+
+   # setup.py
+   setup(
+      ...,
+      entry_points={
+         'jarbas-tasks': [
+             'mytask1 = mytask:task1',  # Maps command name to task object
+             'mytask2 = mytask:task2',
+         ]
+      },
+   }
 
 The handler should be a regular Invoke task declared anywhere in the module:
 
