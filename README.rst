@@ -13,9 +13,9 @@
 Jarbas tasks
 ============
 
-This is a very small module defines a mechanism to inject invoke tasks to
-Jarbas enabled projects. The jarbas-tasks cli is designed to be used as an
-entry point of a docker container and is used as such in most Jarbas based
+This is a very small module that defines a mechanism to inject `invoke<https://pyinvoke.org)`_
+tasks to Jarbas enabled projects. The jarbas-tasks cli is designed to be used as an
+entry point of a Docker container and is used as such in most Jarbas based
 images. By default, it accepts the following sub-commands:
 
 Start a bash shell:
@@ -44,7 +44,7 @@ available tasks. Users can create *task packages* that can inject arbitrary
 default tasks to the jarbas-tasks command.
 
 In order to do so, create a Python package that expose the following entry
-point:
+points:
 
     setup(
         ...,
@@ -56,4 +56,18 @@ point:
         },
     }
 
-The handler should be a regular invoke task declared anywhere in the module.
+The handler should be a regular Invoke task declared anywhere in the module:
+
+.. code-block:: python
+
+   # mytask.py
+
+   from invoke import task
+
+   @task
+   def task1(ctx):
+      print('Hello from task1')
+
+   @task
+   def task2(ctx):
+      print('Hello from task2')
